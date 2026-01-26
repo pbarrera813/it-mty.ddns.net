@@ -2,6 +2,7 @@ import crossWord from "../assets/img-projects/crossWord.png";
 import pacmanGame from "../assets/img-projects/pacmanGame.png";
 import nasCloud from "../assets/img-projects/nasCloud.png";
 import snakeGame from "../assets/img-projects/snakeGame.png";
+import checkout from "../assets/img-projects/checkout.png";
 
 export const proyectos = [
   {
@@ -44,4 +45,13 @@ export const proyectos = [
     codigo: "https://github.com/pbarrera813/Snake-Game/tree/main",
     categoria: "Frontend",
   },
+    {
+    titulo: "Self-checkout items",
+    descripcion:
+    "Aplicación móvil con inicio de sesión mediante correo organizacional, tiene el fin de entrega de accesorios a empleados, y del lado administrativo mediante la base de datos se puede mantener un control de los ítems obtenidos.",
+    imagen: checkout.src,
+    tecnologias: ["Java"],
+    demo:"",
+    codigo: "https://github.com/pbarrera813/self-checkout",
+    }
  ];

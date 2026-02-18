@@ -1,0 +1,29 @@
+---
+export interface Props {
+  titulo: string;
+}
+
+const { titulo } = Astro.props;
+---
+
+<section
+  class="hero-surface relative text-white py-24 mt-[72px] overflow-hidden mask-[linear-gradient(to_bottom,black,black,transparent)]"
+>
+  <div class="max-w-6xl mx-auto px-6 text-center relative">
+    <h1
+      class="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide drop-shadow-lg text-shadow-cyan"
+    >
+      {titulo}
+    </h1>
+  </div>
+</section>
+
+<style>
+  .hero-surface {
+    background-image:
+      linear-gradient(var(--hero-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px),
+      linear-gradient(160deg, var(--surface-2), var(--surface-3));
+    background-size: 25px 25px, 25px 25px, 100% 100%;
+  }
+</style>

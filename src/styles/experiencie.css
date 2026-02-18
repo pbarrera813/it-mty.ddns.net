@@ -1,0 +1,108 @@
+.experience h2 {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .experience h2 {
+    justify-content: start;
+  }
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .jobs {
+    flex-direction: row;
+  }
+}
+
+.job-title {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .job-title {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 16px;
+  }
+  .job-title button.active::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 70%;
+    background-color: var(--accent);
+    border-radius: 4px;
+  }
+}
+
+.job-title button {
+  background: transparent;
+  color: var(--text-soft);
+  border: none;
+  padding: 16px 24px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  white-space: nowrap;
+  position: relative;
+}
+
+.job-title button.active {
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+.jobs-descriptions {
+  flex: 1;
+}
+
+.description {
+  display: none;
+  animation: fade 500ms ease;
+  color: var(--text-main);
+}
+
+.description.active {
+  display: block;
+}
+
+.job-time {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.badge {
+  background: linear-gradient(120deg, var(--g5), var(--g7));
+  border-radius: 1000px;
+  padding: 2px 12px;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--button-text);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

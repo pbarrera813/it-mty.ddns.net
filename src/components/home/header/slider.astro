@@ -1,0 +1,69 @@
+---
+const technologies = [
+  { label: "Astro", iconSrc: "/svg/astro.svg" },
+  { label: "React", iconSrc: "/svg/react.svg" },
+  { label: "Python", iconSrc: "/svg/python.svg" },
+  { label: "C++", iconSrc: "/svg/cpp.svg" },
+  {
+    label: "Docker",
+    iconSrc:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  { label: "HTML5", iconSrc: "/svg/HTML5.svg" },
+  { label: "CSS3", iconSrc: "/svg/CSS3.svg" },
+  { label: "JavaScript", iconSrc: "/svg/javaScript.svg" },
+  {
+    label: "Java",
+    iconSrc:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  { label: "Git", iconSrc: "/svg/git.svg" },
+  { label: "MySQL", iconSrc: "/svg/mysql.svg" },
+  {
+    label: "Go",
+    iconSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+  },
+];
+---
+
+<div class="relative overflow-x-hidden px-8 py-8">
+  <div class="animate-scroll hover:animate-paused flex w-max gap-12 md:gap-20">
+    {
+      technologies.concat(technologies, technologies).map((tech) => (
+        <div class="group flex items-center gap-2 transition-all duration-300">
+          <img
+            src={tech.iconSrc}
+            alt={tech.label}
+            class="h-7 w-auto object-contain  transition-transform group-hover:scale-110"
+            width="30"
+            height="30"
+            loading="lazy"
+          />
+          <span class="text-lg font-medium text-white">
+            {tech.label}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style is:global>
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll {
+      animation-duration: 80s;
+    }
+  }
+</style>

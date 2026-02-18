@@ -58,8 +58,3 @@ Portfolio personal construido con Astro y React, personalizado sobre una plantil
 - Se agrego Java en:
   - Seccion `Tecnologias` (pagina Sobre mi)
   - Carrusel de tecnologias (pagina principal)
-
-## Creditos
-
-Plantilla base obtenida de:
-`https://github.com/Lautaro-R-collins/lrc-portfolio`

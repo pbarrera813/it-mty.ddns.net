@@ -35,7 +35,6 @@ Portfolio personal construido con Astro y React, personalizado sobre una plantil
 |   |-- pages/               # Paginas principales
 |   |-- scripts/             # Scripts de interaccion
 |   |-- styles/              # Estilos globales y secciones
-|-- whitedarktoggle/         # Referencia original del toggle
 |-- astro.config.mjs
 |-- package.json
 ```

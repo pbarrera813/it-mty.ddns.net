@@ -4,8 +4,9 @@ import nasCloud from "../assets/img-projects/nasCloud.png";
 import snakeGame from "../assets/img-projects/snakeGame.png";
 import checkout from "../assets/img-projects/checkout.png";
 import mcPanel from "../assets/img-projects/mcPanel.png";
-
+import playerping from "../assets/img-projects/playerping.png";
 export const proyectos = [
+  
   {
     titulo: "Sopa de letras",
     descripcion:
@@ -65,5 +66,14 @@ export const proyectos = [
         demo: "https://it-mty.ddns.net/panel-demo/",
         codigo: "https://github.com/pbarrera813/MC-AdPanel",
         categoria: "FullStack",
-    }
+    },
+    {
+	      titulo: "PlayerPing-mod",
+	      descripcion: "Mod para minecraft java que obtiene el ping de un usuario, mostrando con indicador de colores si es excelente, bueno, regular, malo o terrible.",
+	      imagen: playerping.src,
+	      tecnologias: ["Java"],
+	      demo:"",
+	      codigo: "https://github.com/pbarrera813/PingPlayer",
+	      categoria: "Backend",
+    },
  ];

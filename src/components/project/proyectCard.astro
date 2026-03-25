@@ -1,6 +1,4 @@
 ---
-import { HiArrowRight } from "react-icons/hi";
-
 export interface Props {
   titulo: string;
   descripcion: string;
@@ -9,11 +7,12 @@ export interface Props {
   demo: string;
   codigo: string;
   categoria?: string;
-  index: number; 
+  index: number;
 }
 
 const { titulo, descripcion, imagen, tecnologias, demo, codigo, categoria, index } =
   Astro.props;
+const hasDemo = typeof demo === "string" && demo.trim().length > 0;
 ---
 
 <div
@@ -41,31 +40,35 @@ const { titulo, descripcion, imagen, tecnologias, demo, codigo, categoria, index
 
     <p class="flex grow text-gray-400">{descripcion}</p>
 
-    <div class="mt-auto flex justify-between">
-      <a
-        class="group text-primary mt-6 flex items-center justify-start p-0 font-bold text-lg"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={demo}
-      >
-        Demo
-        <HiArrowRight
-          className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
-          size={18}
-        />
-      </a>
+    <div class="mt-auto flex justify-between gap-2">
+      {
+        hasDemo ? (
+          <a
+            class="mt-4 min-w-[96px] rounded-xl bg-primary px-2.5 py-1.5 text-center text-force-white text-sm font-semibold transition-colors hover:bg-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={demo}
+          >
+            Pruebalo
+          </a>
+        ) : (
+          <button
+            type="button"
+            data-no-demo-trigger
+            class="mt-4 min-w-[96px] cursor-pointer rounded-xl bg-primary px-2.5 py-1.5 text-center text-force-white text-sm font-semibold transition-colors hover:bg-secondary"
+          >
+            Pruebalo
+          </button>
+        )
+      }
 
       <a
-        class="group text-primary mt-6 flex items-center justify-start p-0 font-bold text-lg"
+        class="mt-4 min-w-[96px] rounded-xl bg-primary px-2.5 py-1.5 text-center text-force-white text-sm font-semibold transition-colors hover:bg-secondary"
         href={codigo}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Código
-        <HiArrowRight
-          className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
-          size={18}
-        />
+        Codigo
       </a>
     </div>
   </div>

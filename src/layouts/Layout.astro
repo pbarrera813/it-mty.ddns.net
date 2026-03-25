@@ -25,5 +25,39 @@ import Footer from "../components/commons/footer/footer.astro";
     <Navbar />
     <slot />
     <Footer />
+    <script is:inline>
+      (function () {
+        const message = "Lo siento, este proyecto aun no cuenta con una demo.";
+        let activeToast = null;
+
+        function removeToast() {
+          if (!activeToast) return;
+          activeToast.classList.add("demo-toast-hide");
+          const toastToRemove = activeToast;
+          activeToast = null;
+          setTimeout(() => toastToRemove.remove(), 260);
+        }
+
+        function showToast() {
+          removeToast();
+          const toast = document.createElement("div");
+          toast.className = "demo-toast";
+          toast.textContent = message;
+          document.body.appendChild(toast);
+          activeToast = toast;
+          setTimeout(() => toast.classList.add("demo-toast-show"), 10);
+          setTimeout(removeToast, 2600);
+        }
+
+        document.addEventListener("click", (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          const trigger = target.closest("[data-no-demo-trigger]");
+          if (!trigger) return;
+          event.preventDefault();
+          showToast();
+        });
+      })();
+    </script>
   </body>
 </html>

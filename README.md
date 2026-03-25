@@ -11,7 +11,11 @@ Portfolio personal construido con Astro y React, personalizado sobre una plantil
 - Persistencia del tema en `localStorage`
 - Diseno responsive para desktop y mobile
 - Secciones: Inicio, Proyectos, Sobre mi, Contacto
-- Filtrado dinamico de proyectos
+- Filtrado dinamico de proyectos con categorias:
+  `Todos`, `Full Stack`, `Frontend`, `Backend`, `Desarrollo`
+- Fallback visual para proyectos sin demo disponible
+- Header con logo personalizado (icono de computadora)
+- Footer con nombre completo
 
 ## Tecnologias utilizadas
 
@@ -28,8 +32,13 @@ Portfolio personal construido con Astro y React, personalizado sobre una plantil
 |-- public/
 |   |-- svg/                 # Iconos y recursos estaticos
 |-- src/
+|   |-- assets/
+|   |   |-- img/             # Imagenes generales (incluye logo del header)
+|   |   |-- img-projects/    # Imagenes de proyectos
 |   |-- components/          # Componentes Astro/React
 |   |   |-- commons/navbar/  # Navbar + theme toggle
+|   |   |-- project/         # Tarjetas de proyectos (pagina proyectos)
+|   |   |-- home/homeProyect/ # Proyectos destacados (home)
 |   |-- data/                # Datos de proyectos y experiencia
 |   |-- layouts/             # Layout base global
 |   |-- pages/               # Paginas principales
@@ -54,6 +63,10 @@ Portfolio personal construido con Astro y React, personalizado sobre una plantil
 - Se implemento el toggle claro/oscuro en el navbar con apariencia personalizada.
 - Se mejoro contraste de textos en botones y tarjetas clave.
 - Se actualizaron iconos de la seccion Servicios.
-- Se agrego Java en:
+- Se removio Facebook de manera global.
+- Se renombro `MC-AdPanel` a `Orexa Panel`.
+- `Orexa Panel` aparece ahora en proyectos destacados y en filtros multiples.
+- Se agrego la categoria `Desarrollo` para proyectos complejos.
+- Se agrego Java, Go y Docker en el stack visible del sitio:
   - Seccion `Tecnologias` (pagina Sobre mi)
   - Carrusel de tecnologias (pagina principal)

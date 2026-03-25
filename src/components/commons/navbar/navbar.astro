@@ -3,6 +3,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import NotificationBell from "./notificationBell.jsx";
 import ThemeToggle from "./themeToggle.jsx";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import computerLogo from "../../../assets/img/computer.png";
 
 const links = [
   { name: "Inicio", href: "/" },
@@ -23,11 +24,11 @@ const links = [
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center">
-        <h3
-          class="text-[#69c7c7] text-3xl font-bold drop-shadow-[1.5px_1.5px_0_#7836cf]"
-        >
-          PAHB
-        </h3>
+        <img
+          src={computerLogo.src}
+          alt="Logo"
+          class="h-12 w-12 object-contain drop-shadow-[2px_2px_0_#7836cf]"
+        />
       </a>
 
       <!-- Desktop Links -->

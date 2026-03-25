@@ -1,5 +1,4 @@
 import {
-  FaFacebook,
   FaLinkedinIn,
   FaGithub,
   FaInstagram,
@@ -26,16 +25,6 @@ const SocialIcons = () => {
         aria-label="Github"
       >
         <FaGithub className="h-7 w-7" />
-      </a>
-
-      <a
-        href="https://www.facebook.com/pablo.barrera.50364"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-3 text-zinc-400 hover:text-[#69c7c7] drop-shadow-[1px_1px_0_#7836cf]"
-        aria-label="Facebook"
-      >
-        <FaFacebook className="h-7 w-7" />
       </a>
 
       <a

@@ -26,10 +26,10 @@ export const proyectos = [
     codigo: "https://filebrowser.org/index.html",
   },
   {
-    titulo: "Panel Administracion Servidores Minecraft",
+    titulo: "Orexa Panel",
     imagen: mcPanel.src,
     tecnologias: ["TypeScript", "Go", "HTML"],
-    demo: "https://it-mty.ddns.net/pacman-demo/",
+    demo: "https://it-mty.ddns.net/panel-demo/",
     codigo: "https://github.com/pbarrera813/MC-AdPanel",
     },
 ];

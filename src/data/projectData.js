@@ -16,6 +16,7 @@ export const proyectos = [
     demo: "https://it-mty.ddns.net/sopa/",
     codigo: "https://github.com/pbarrera813/Word-Search-Puzzle",
     categoria: "Frontend",
+    destacado: true,
   },
   {
     titulo: "Recreacion Pac-man Arcade",
@@ -25,7 +26,8 @@ export const proyectos = [
     tecnologias: ["Cpp"],
     demo: "https://it-mty.ddns.net/pacman/",
     codigo: "https://github.com/pbarrera813/Pacman-Game/",
-    categoria: "Programacion",
+    categoria: "Desarrollo",
+    destacado: true,
   },
   {
     titulo: "Servidor NAS",
@@ -35,7 +37,8 @@ export const proyectos = [
     tecnologias: ["Linux", "Docker"],
     demo: "https:/it-mty.ddns.net/cloud/",
     codigo: "https://filebrowser.org/index.html",
-    categoria: "Backend",
+    categoria: "Backend,Desarrollo",
+    destacado: true,
   },
   {
     titulo: "Recreacion juego Snake",
@@ -46,6 +49,7 @@ export const proyectos = [
     demo: "https:/it-mty.ddns.net/snake/",
     codigo: "https://github.com/pbarrera813/Snake-Game/tree/main",
     categoria: "Frontend",
+    destacado: false,
   },
     {
     titulo: "Self-checkout items",
@@ -55,17 +59,19 @@ export const proyectos = [
     tecnologias: ["Java"],
     demo:"",
     codigo: "https://github.com/pbarrera813/self-checkout",
-    categoria: "FullStack",
+    categoria: "FullStack,Desarrollo",
+    destacado: false,
     },
     {
-        titulo: "MC-AdPanel",
+        titulo: "Orexa Panel",
         descripcion:
         "Panel de administracion para servidores de minecraft con soporte para multiples tipos de servidores, con explorador de archivos capaz de leer archivos de texto, pagina de manejo y control de plugins/mods, compatible con Docker para un mas facil acceso.",
         imagen: mcPanel.src,
         tecnologias: ["TypeScript", "Go", "HTML"],
         demo: "https://it-mty.ddns.net/panel-demo/",
         codigo: "https://github.com/pbarrera813/MC-AdPanel",
-        categoria: "FullStack",
+        categoria: "FullStack,Frontend,Backend",
+        destacado: true,
     },
     {
 	      titulo: "PlayerPing-mod",
@@ -74,6 +80,7 @@ export const proyectos = [
 	      tecnologias: ["Java"],
 	      demo:"",
 	      codigo: "https://github.com/pbarrera813/PingPlayer",
-	      categoria: "Backend",
+	      categoria: "Desarrollo",
+        destacado: false,
     },
  ];
